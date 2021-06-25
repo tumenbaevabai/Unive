@@ -1,26 +1,22 @@
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel( {});
 });
-
-document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '.splide', {
-        direction  : 'ttb',
-        heightRatio: 2,
-        perPage    : 6,
-        arrows: false,
-        pagination: false,
-    } ).mount();
-} );
-
+/*close side bar*/
 $ ('.arrow').on('click', function (e) {
     e.preventDefault();
-    $ ('.advertising').toggleClass('none')
+    $ ('.advertising').toggleClass('disable')
     $ ('.sidebar').toggleClass('sidebar--active')
-    $ ('.logo--text').toggleClass('none')
-    $ ('.menu__link--text').toggleClass('none')
+    $ ('.logo--text').toggleClass('disable')
+    $ ('.menu__link--text').toggleClass('disable')
     $ ('.arrow').toggleClass('arrow--active')
 })
+$ ('.control__btn--chevron').on('click', function (e) {
+    e.preventDefault();
+    $ ('.messenger').toggleClass('disable')
+    $ ('.messenger-hidden').toggleClass('disable')
+})
 
+/*sidebar links*/
 const linkColor = document.querySelectorAll('.menu__link')
 
 function colorLink(){
@@ -30,3 +26,31 @@ function colorLink(){
     }
 }
 linkColor.forEach(l=> l.addEventListener('click', colorLink))
+/*progres bar*/
+
+/*COUNT*/
+$('.counting').each(function() {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+
+    $({ countNum: $this.text()}).animate({
+            countNum: countTo
+        },
+
+        {
+
+            duration: 2000,
+            easing:'linear',
+            step: function() {
+                $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+            }
+
+        });
+
+
+});
+
