@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="./css/splide-default.min.css">
     <!-- ############### SPLIDE CSS ############### -->
     <link rel="stylesheet" href="./css/splide.min.css">
+    <!-- ############### JQUERY ############### -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ############### JQUERY PROGRESS CIRCLE ############### -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- ############### STYLES ############### -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Unive</title>
@@ -62,7 +66,7 @@
                     <span class="logo--text">Univé</span>
                 </a>
                 <div class="menu">
-                    <a href="#" class="menu__link menu__link--active">
+                <a href="#" class="menu__link menu__link--active">
                         <i class='bx bx-grid-alt menu__icon'></i>
                         <span class="menu__link--text">Dashboard</span>
                     </a>
@@ -167,7 +171,7 @@
                                 <h3 class="widget__name">Active Programs</h3>
                                 <a href="#" class="widget__more"><i class='bx bx-dots-horizontal-rounded'></i></a>
                             </div>
-                            <div class="program">
+                            <div class="program program--first">
                                 <div class="program__info">
                                     <div class="program__img">
                                         <img src="./img/widgets/program.png" alt="">
@@ -194,7 +198,11 @@
                                         </div>
                                     </div>
                                     <div class="program__progress">
-
+                                        <div class="circle">
+                                            <div class="circle__bar"></div>
+                                            <div class="circle__box"><span class="circle__box--text"></span></div>
+                                        </div>
+                                        <p class="program__progress--text">Completion</p>
                                     </div>
                                 </div>
                             </div>
@@ -225,7 +233,11 @@
                                         </div>
                                     </div>
                                     <div class="program__progress">
-
+                                        <div class="circle circle--s">
+                                            <div class="circle__bar"></div>
+                                            <div class="circle__box"><span class="circle__box--text"></span></div>
+                                        </div>
+                                        <p class="program__progress--text">Completion</p>
                                     </div>
                                 </div>
                             </div>
@@ -233,12 +245,19 @@
                     </div>
                     <div class="widget--s">
                         <div class="widget__content">
-
+                            <div class="progress">
+                                <div class="progress__img">
+                                    <img src="./img/widgets/session.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="widget--m">
                         <div class="widget__content">
-
+                            <div class="widget__info">
+                                <h3 class="widget__name">Upcoming Sessions</h3>
+                                <a href="#" class="widget__more"><i class='bx bx-dots-horizontal-rounded'></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -693,8 +712,6 @@
         </div>
     </div>
 </main>
-<!-- ############### JQUERY ############### -->
-<script src="./js/jquery.js"></script>
 <!-- ############### OWL CAROUSEL JS ############### -->
 <script src="./js/owl.carousel.min.js"></script>
 <!-- ############### SPLIDE JS ############### -->

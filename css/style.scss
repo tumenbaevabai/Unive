@@ -38,6 +38,10 @@ a {
   min-height: 100%;
 }
 
+.show {
+  bottom: 0 !important;
+}
+
 /* ############################# SIDEBAR ############################# */
 
 .sidebar {
@@ -260,6 +264,8 @@ a {
     align-items: flex-end;
 
     .widget {
+      height: 90%;
+      width: 100%;
       padding: 0 0 35px 0;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -267,18 +273,21 @@ a {
       grid-gap: 26px;
       grid-template-areas:
     "widget--l widget--l widget--l widget--l widget--l widget--l widget--l"
-    "widget--s widget--s widget--s widget--m widget--m widget--m widget--m";
+    "widget--s widget--s widget--m widget--m widget--m widget--m widget--m";
 
       &__content {
         padding: 20px 25px;
 
         .program {
-          padding: 25px 0;
+          padding: 25px 35px 20px 0;
           display: flex;
           justify-content: space-between;
-
+          &--first {
+            border-bottom: 1px solid #EEEEEE;
+          }
           &__info {
             display: flex;
+            width: 42%;
           }
 
           &__img {
@@ -291,7 +300,7 @@ a {
 
           &__direction {
             display: inline-block;
-            padding: 0 10px;
+            padding: 0 15px;
             background: #5855D6;
             border-radius: 35px;
             font-weight: 600;
@@ -312,14 +321,16 @@ a {
           }
 
           &__data {
-
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
           }
 
           &__statistic {
             display: flex;
             justify-content: center;
             align-items: center;
-
             .counter {
               max-width: 64px;
               margin-right: 40px;
@@ -367,7 +378,47 @@ a {
           }
 
           &__progress {
+            margin-left: 20px;
+            &--text {
+              margin-top: 10px;
+              font-size: 10px;
+              line-height: 12px;
+              text-align: center;
+              color: #9592A6;
+            }
+            .circle {
+              position: relative;
+              width: 52px;
+              height: 52px;
+              //border: 8px solid #5855D6;
+              border-radius: 50%;
+              &__bar {
 
+              }
+              &__box {
+
+                &--text {
+                  font-family: 'MuseoModerno', cursive;
+                  font-weight: bold;
+                  font-size: 12px;
+                  line-height: 19px;
+                  text-align: center;
+                  color: #9592A6;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+          }
+        }
+        .progress {
+
+          &__img {
+            img {
+              width: 100%;
+            }
           }
         }
       }
@@ -406,10 +457,12 @@ a {
         grid-area: widget--s;
         background: #FFFFFF;
         border-radius: 20px;
+        height: 80%;
       }
     }
 
     .messenger {
+      position: relative;
       transition: .6s;
       overflow-y: scroll;
       margin-left: 25px;
@@ -419,6 +472,9 @@ a {
       background: #FFFFFF;
       &::-webkit-scrollbar {
         display: none;
+      }
+      &.show {
+        bottom: -100%;
       }
       .topbar {
         border-bottom: 1px solid #EEEEEE;

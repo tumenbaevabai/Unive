@@ -54,3 +54,18 @@ $('.counting').each(function() {
 
 });
 
+let options = {
+    startAngle: -1.55,
+    size: 52,
+    value: 0.45,
+    fill: {color: "#5855D6"}
+}
+$(".circle .circle__bar").circleProgress(options).on('circle-animation-progress',
+    function (event, progress, stepValue){
+    $(this).parent().find(".circle__box--text").text(String(stepValue.toFixed(2).substr(2)) + "%")
+    });
+$(".circle--s .circle__bar").circleProgress({
+    value: 0.28,
+})
+
+

@@ -36,6 +36,10 @@ a {
   min-height: 100%;
 }
 
+.show {
+  bottom: 0 !important;
+}
+
 /* ############################# SIDEBAR ############################# */
 .sidebar {
   max-height: 100%;
@@ -226,30 +230,36 @@ a {
   align-items: flex-end;
 }
 .content-bar .content .widget {
+  height: 90%;
+  width: 100%;
   padding: 0 0 35px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 26px;
-  grid-template-areas: "widget--l widget--l widget--l widget--l widget--l widget--l widget--l" "widget--s widget--s widget--s widget--m widget--m widget--m widget--m";
+  grid-template-areas: "widget--l widget--l widget--l widget--l widget--l widget--l widget--l" "widget--s widget--s widget--m widget--m widget--m widget--m widget--m";
 }
 .content-bar .content .widget__content {
   padding: 20px 25px;
 }
 .content-bar .content .widget__content .program {
-  padding: 25px 0;
+  padding: 25px 35px 20px 0;
   display: flex;
   justify-content: space-between;
 }
+.content-bar .content .widget__content .program--first {
+  border-bottom: 1px solid #EEEEEE;
+}
 .content-bar .content .widget__content .program__info {
   display: flex;
+  width: 42%;
 }
 .content-bar .content .widget__content .program__desc {
   margin-left: 16px;
 }
 .content-bar .content .widget__content .program__direction {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 15px;
   background: #5855D6;
   border-radius: 35px;
   font-weight: 600;
@@ -266,6 +276,12 @@ a {
   line-height: 17px;
   letter-spacing: -0.24px;
   color: #333269;
+}
+.content-bar .content .widget__content .program__data {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .content-bar .content .widget__content .program__statistic {
   display: flex;
@@ -311,6 +327,37 @@ a {
   text-align: center;
   color: #9592A6;
 }
+.content-bar .content .widget__content .program__progress {
+  margin-left: 20px;
+}
+.content-bar .content .widget__content .program__progress--text {
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #9592A6;
+}
+.content-bar .content .widget__content .program__progress .circle {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+.content-bar .content .widget__content .program__progress .circle__box--text {
+  font-family: "MuseoModerno", cursive;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  color: #9592A6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content-bar .content .widget__content .progress__img img {
+  width: 100%;
+}
 .content-bar .content .widget__info {
   display: flex;
   justify-content: space-between;
@@ -340,8 +387,10 @@ a {
   grid-area: widget--s;
   background: #FFFFFF;
   border-radius: 20px;
+  height: 80%;
 }
 .content-bar .content .messenger {
+  position: relative;
   transition: 0.6s;
   overflow-y: scroll;
   margin-left: 25px;
@@ -352,6 +401,9 @@ a {
 }
 .content-bar .content .messenger::-webkit-scrollbar {
   display: none;
+}
+.content-bar .content .messenger.show {
+  bottom: -100%;
 }
 .content-bar .content .messenger .topbar {
   border-bottom: 1px solid #EEEEEE;
