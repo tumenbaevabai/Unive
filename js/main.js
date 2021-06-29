@@ -26,8 +26,6 @@ function colorLink(){
     }
 }
 linkColor.forEach(l=> l.addEventListener('click', colorLink))
-/*progres bar*/
-
 /*COUNT*/
 $('.counting').each(function() {
     var $this = $(this),
@@ -53,6 +51,8 @@ $('.counting').each(function() {
 
 
 });
+
+/*progres bar*/
 
 let options = {
     startAngle: -1.55,
