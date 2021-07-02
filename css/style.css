@@ -40,6 +40,10 @@ a {
   bottom: 0 !important;
 }
 
+.grid {
+  display: grid;
+}
+
 /* ############################# SIDEBAR ############################# */
 .sidebar {
   max-height: 100%;
@@ -237,7 +241,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 26px;
-  grid-template-areas: "widget--l widget--l widget--l widget--l widget--l widget--l widget--l" "widget--s widget--s widget--m widget--m widget--m widget--m widget--m";
+  grid-template-areas: "widget--l widget--l widget--l widget--l widget--l widget--l widget--l" "widget--s widget--s widget--s widget--m widget--m widget--m widget--m";
 }
 .content-bar .content .widget__content {
   padding: 20px 25px;
@@ -362,6 +366,7 @@ a {
 .content-bar .content .widget__content .progress__img img {
   height: 270px;
   width: 100%;
+  object-fit: fill;
 }
 .content-bar .content .widget__content .progress__img .progress__check {
   text-align: center;
@@ -445,6 +450,94 @@ a {
   font-size: 16px;
 }
 .content-bar .content .widget__content .progress__content__bot .progress__content__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: #5855D6;
+}
+.content-bar .content .widget__content .session {
+  margin: 28px 0 34px;
+}
+.content-bar .content .widget__content .session__marks {
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-column-gap: 20px;
+}
+.content-bar .content .widget__content .session__marks--date {
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #65708D;
+}
+.content-bar .content .widget__content .session__marks--class {
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #65708D;
+}
+.content-bar .content .widget__content .session__marks--time {
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #65708D;
+}
+.content-bar .content .widget__content .session__content {
+  padding: 10px 0;
+  grid-template-columns: 1fr 4fr;
+  grid-column-gap: 20px;
+  align-items: center;
+}
+.content-bar .content .widget__content .session__content--border {
+  border-bottom: 1px solid #EEEEEE;
+}
+.content-bar .content .widget__content .session__date {
+  text-align: center;
+}
+.content-bar .content .widget__content .session__date--day {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  color: #5855D6;
+}
+.content-bar .content .widget__content .session__date--number {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #868597;
+}
+.content-bar .content .widget__content .session__date--month {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #868597;
+}
+.content-bar .content .widget__content .session__text {
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+}
+.content-bar .content .widget__content .session__text:hover {
+  background: #FAFAFF;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.content-bar .content .widget__content .session__time {
+  padding: 4px 6px;
+  background: #E7E7FF;
+  border-radius: 11px;
+}
+.content-bar .content .widget__content .session__time--text {
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  color: #333269;
+}
+.content-bar .content .widget__content .session__link {
+  display: block;
+  text-align: right;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
@@ -793,7 +886,7 @@ a {
 }
 .content-bar .content .messenger-hidden {
   position: fixed;
-  bottom: 0;
+  bottom: -10px;
   right: 38px;
   transition: 0.6s;
   min-width: 310px;

@@ -42,6 +42,10 @@ a {
   bottom: 0 !important;
 }
 
+.grid {
+  display: grid;
+}
+
 /* ############################# SIDEBAR ############################# */
 
 .sidebar {
@@ -273,18 +277,21 @@ a {
       grid-gap: 26px;
       grid-template-areas:
     "widget--l widget--l widget--l widget--l widget--l widget--l widget--l"
-    "widget--s widget--s widget--m widget--m widget--m widget--m widget--m";
+    "widget--s widget--s widget--s widget--m widget--m widget--m widget--m";
 
       &__content {
         padding: 20px 25px;
         position: relative;
+
         .program {
           padding: 25px 35px 20px 0;
           display: flex;
           justify-content: space-between;
+
           &--first {
             border-bottom: 1px solid #EEEEEE;
           }
+
           &__info {
             display: flex;
             width: 42%;
@@ -331,6 +338,7 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
+
             .counter {
               max-width: 64px;
               margin-right: 40px;
@@ -379,6 +387,7 @@ a {
 
           &__progress {
             margin-left: 20px;
+
             &--text {
               margin-top: 10px;
               font-size: 10px;
@@ -386,15 +395,18 @@ a {
               text-align: center;
               color: #9592A6;
             }
+
             .circle {
               position: relative;
               width: 52px;
               height: 52px;
               //border: 8px solid #5855D6;
               border-radius: 50%;
+
               &__bar {
 
               }
+
               &__box {
 
                 &--text {
@@ -413,14 +425,18 @@ a {
             }
           }
         }
+
         .progress {
           &__img {
             position: relative;
+
             img {
               height: 270px;
               width: 100%;
+              object-fit: fill;
             }
-            .progress__check{
+
+            .progress__check {
               text-align: center;
               position: absolute;
               top: 0;
@@ -429,10 +445,12 @@ a {
               background: #5855D6;
               box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
               border-radius: 0 0 10px 10px;
+
               &--icon {
                 font-size: 1.7rem;
                 color: #4ED964;
               }
+
               &--text {
                 font-weight: 500;
                 font-size: 8px;
@@ -443,6 +461,7 @@ a {
             }
           }
         }
+
         .progress__content {
           max-width: 95%;
           bottom: calc(50% - 60%);
@@ -454,10 +473,12 @@ a {
           background: #FAFAFF;
           box-shadow: 0 14px 20px rgba(0, 0, 0, 0.1);
           border-radius: 10px;
+
           &__top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             .progress__content__trend {
               .progress__name {
                 font-weight: 500;
@@ -466,6 +487,7 @@ a {
                 letter-spacing: 0.02em;
                 color: #0E1566;
               }
+
               .progress__direction {
                 margin-top: 3px;
                 font-size: 11px;
@@ -475,6 +497,7 @@ a {
                 color: #9592A6;
               }
             }
+
             .progress__content__term {
               .progress__content__date {
                 font-weight: bold;
@@ -483,6 +506,7 @@ a {
                 text-align: center;
                 color: #868597;
               }
+
               .progress__content__date--month {
                 font-weight: 600;
                 font-size: 10px;
@@ -492,19 +516,23 @@ a {
               }
             }
           }
+
           &__bot {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             .progress__content__period {
               font-size: 14px;
               line-height: 17px;
               letter-spacing: 0.02em;
               color: #FF2C55;
+
               .progress__content__icon {
-                font-size: 16px ;
+                font-size: 16px;
               }
             }
+
             .progress__content__link {
               font-weight: 600;
               font-size: 14px;
@@ -512,6 +540,107 @@ a {
               letter-spacing: 0.02em;
               color: #5855D6;
             }
+          }
+        }
+
+        .session {
+          margin: 28px 0 34px;
+
+          &__marks {
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-column-gap: 20px;
+            &--date {
+              text-align: center;
+              font-size: 14px;
+              line-height: 17px;
+              color: #65708D;
+            }
+
+            &--class {
+              text-align: center;
+              font-size: 14px;
+              line-height: 17px;
+              color: #65708D;
+            }
+
+            &--time {
+              text-align: center;
+              font-size: 14px;
+              line-height: 17px;
+              color: #65708D;
+            }
+          }
+
+          &__content {
+            padding: 10px 0;
+            grid-template-columns: 1fr 4fr;
+            grid-column-gap: 20px;
+            align-items: center;
+            &--border {
+              border-bottom: 1px solid #EEEEEE;
+            }
+          }
+
+          &__date {
+            text-align: center;
+            &--day {
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 12px;
+              color: #5855D6;
+            }
+            &--number {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 22px;
+              color: #868597;
+            }
+            &--month {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 12px;
+              color: #868597;
+            }
+          }
+
+          &__text {
+            padding: 10px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: .6s;
+            &:hover {
+              background: #FAFAFF;
+              box-shadow: 0 14px 20px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+            }
+          }
+
+          &__direction {}
+          &__title {}
+          &__desc {}
+          &__time {
+            padding: 4px 6px;
+            background: #E7E7FF;
+            border-radius: 11px;
+            &--text {
+              font-weight: 600;
+              font-size: 9px;
+              line-height: 11px;
+              text-align: center;
+              color: #333269;
+            }
+          }
+          &__ {}
+
+          &__link {
+            display: block;
+            text-align: right;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.02em;
+            color: #5855D6;
           }
         }
       }
@@ -563,12 +692,15 @@ a {
       max-width: 310px;
       height: 90%;
       background: #FFFFFF;
+
       &::-webkit-scrollbar {
         display: none;
       }
+
       &.show {
         bottom: -100%;
       }
+
       .topbar {
         border-bottom: 1px solid #EEEEEE;
         border-radius: 20px 20px 0 0;
@@ -629,9 +761,11 @@ a {
         padding: 18px 0 0 16px;
         cursor: pointer;
         margin-bottom: 20px;
-         &::-webkit-scrollbar {
+
+        &::-webkit-scrollbar {
           display: none;
         }
+
         &__item {
           margin-right: 21px;
           padding: 5px 0 0;
@@ -689,9 +823,11 @@ a {
 
       .message {
         padding: 0 16px;
+
         &::-webkit-scrollbar {
           display: none;
         }
+
         .dialogue {
           display: flex;
           justify-content: space-between;
@@ -910,12 +1046,13 @@ a {
 
     .messenger-hidden {
       position: fixed;
-      bottom: 0;
+      bottom: -10px;
       right: 38px;
       transition: .6s;
       min-width: 310px;
       background: #333269;
       border-radius: 20px 20px 0 0;
+
       .topbar {
         border-bottom: 1px solid #EEEEEE;
         background: #333269;
@@ -924,6 +1061,7 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .profile {
           display: flex;
           align-items: center;
