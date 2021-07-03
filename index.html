@@ -283,39 +283,102 @@
                                 <h3 class="widget__name">Upcoming Sessions</h3>
                                 <a href="#" class="widget__more"><i class='bx bx-dots-horizontal-rounded'></i></a>
                             </div>
-                            <div class="session">
-                                <div class="session__marks grid">
-                                    <div class="session__marks--date">
+                            <table class="session">
+                                <thead>
+                                <tr>
+                                    <th class="session__marks--date">
                                         Date
-                                    </div>
-                                    <div class="session__marks--class">
+                                    </th>
+                                    <th class="session__marks--class">
                                         Class
-                                    </div>
-                                    <div class="session__marks--time">
+                                    </th>
+                                    <th class="session__marks--time">
                                         Time
-                                    </div>
-                                </div>
-                                <div class="session__content session__content--border grid">
-                                    <div class="session__date">
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th><div class="session__date">
                                         <p class="session__date--day">Tomorrow</p>
                                         <p class="session__date--number">09</p>
                                         <p class="session__date--month">april</p>
-                                    </div>
-                                    <div class="session__text">
-                                        <div class="session__direction">
-                                            <h4 class="session__title">Database and Information Systems</h4>
-                                            <p class="session__desc">Master of Computer Science</p>
+                                    </div></th>
+                                    <th rowspan="2">
+                                        <div class="session__text">
+                                            <div class="session__direction">
+                                                <h4 class="session__title">Database and Information Systems</h4>
+                                                <p class="session__desc">Master of Computer Science</p>
+                                            </div>
+                                            <div class="session__time">
+                                                <p class="session__time--text">8:30am-1:00pm</p>
+                                            </div>
                                         </div>
-                                        <div class="session__time">
-                                            <p class="session__time--text">8:30am-1:00pm</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="session__content session__content--border grid">
-                                    <div class="session__date">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th><div class="session__date">
                                         <p class="session__date--day">Wed</p>
                                         <p class="session__date--number">10</p>
                                         <p class="session__date--month">april</p>
+                                    </div></th>
+                                    <th rowspan="2">
+                                        <div class="session__text">
+                                            <div class="session__direction">
+                                                <h4 class="session__title">Database and Information Systems</h4>
+                                                <p class="session__desc">Master of Computer Science</p>
+                                            </div>
+                                            <div class="session__time">
+                                                <p class="session__time--text">8:30am-1:00pm</p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th><div class="session__date">
+                                        <p class="session__date--day">Wed</p>
+                                        <p class="session__date--number">10</p>
+                                        <p class="session__date--month">april</p>
+                                    </div></th>
+                                    <th rowspan="2">
+                                        <div class="session__text">
+                                            <div class="session__direction">
+                                                <h4 class="session__title">Database and Information Systems</h4>
+                                                <p class="session__desc">Master of Computer Science</p>
+                                            </div>
+                                            <div class="session__time">
+                                                <p class="session__time--text">8:30am-1:00pm</p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--<div class="session">
+                                <div class="session__marks grid">
+                                    <div class="session__marks&#45;&#45;date">
+                                        Date
+                                    </div>
+                                    <div class="session__marks&#45;&#45;class">
+                                        Class
+                                    </div>
+                                    <div class="session__marks&#45;&#45;time">
+                                        Time
+                                    </div>
+                                </div>
+                                <div class="session__content session__content&#45;&#45;border grid">
+                                    <div class="session__date">
+                                        <p class="session__date&#45;&#45;day">Tomorrow</p>
+                                        <p class="session__date&#45;&#45;number">09</p>
+                                        <p class="session__date&#45;&#45;month">april</p>
+                                    </div>
+
+                                </div>
+                                <div class="session__content session__content&#45;&#45;border grid">
+                                    <div class="session__date">
+                                        <p class="session__date&#45;&#45;day">Wed</p>
+                                        <p class="session__date&#45;&#45;number">10</p>
+                                        <p class="session__date&#45;&#45;month">april</p>
                                     </div>
                                     <div class="session__text">
                                         <div class="session__direction">
@@ -323,15 +386,15 @@
                                             <p class="session__desc">Master of Computer Science</p>
                                         </div>
                                         <div class="session__time">
-                                            <p class="session__time--text">8:30am-1:00pm</p>
+                                            <p class="session__time&#45;&#45;text">8:30am-1:00pm</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="session__content grid">
                                     <div class="session__date">
-                                        <p class="session__date--day">Wed</p>
-                                        <p class="session__date--number">10</p>
-                                        <p class="session__date--month">april</p>
+                                        <p class="session__date&#45;&#45;day">Wed</p>
+                                        <p class="session__date&#45;&#45;number">10</p>
+                                        <p class="session__date&#45;&#45;month">april</p>
                                     </div>
                                     <div class="session__text">
                                         <div class="session__direction">
@@ -339,11 +402,11 @@
                                             <p class="session__desc">Master of Computer Science</p>
                                         </div>
                                         <div class="session__time">
-                                            <p class="session__time--text">8:30am-1:00pm</p>
+                                            <p class="session__time&#45;&#45;text">8:30am-1:00pm</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <a href="#" class="session__link">See All Sessions</a>
                         </div>
                     </div>
